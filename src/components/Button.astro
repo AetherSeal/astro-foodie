@@ -1,0 +1,7 @@
+---
+const {value, type} = Astro.props
+
+---
+
+{type === 'submit' && <input class="uppercase font-aux text-base bg-stone-800 h-12 px-8 ml-2 hover:bg-stone-700 transition-all ase-in-out delay-200" type="button" value={value}/>}
+{type === 'normal' && <input class="font-aux text-base bg-black h-12 px-8 ml-2 hover:bg-stone-700 transition-all ase-in-out delay-200 text-white font-black" type="button" value={value}/>}

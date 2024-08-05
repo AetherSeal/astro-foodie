@@ -1,0 +1,30 @@
+---
+import type { menuDish } from "src/types/menu/menu"
+const {dishes, title} = Astro.props
+---
+<div class="flex flex-col justify-center items-center">
+    <h3 class="text-4xl uppercase mb-8">{title}</h3>
+    <div class="grid grid-cols-3 gap-3">
+        {
+            dishes.map((dish:menuDish)=>{
+                return (
+                    <div class="max-h-13 min-h-13 grid-cols-2 gap-4 content-start">
+                        <div class="col-span-2 flex align-top flex-col">
+                            <h2 class="text-base font-aux font-black">{dish.title}</h2>
+                            <p class=" line-clamp-2 text-xs">
+                                {
+                                    dish.ingridients.map(ingridient=>{
+                                        return `${ingridient} `
+                                    })
+                                }
+                            </p> 
+                        </div>
+                        <div  class="col-span-1">
+                            {dish.price}$
+                        </div>
+                    </div>
+                )
+            })
+        }
+    </div>
+</div>

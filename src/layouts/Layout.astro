@@ -1,0 +1,80 @@
+---
+import Footer from '@components/Footer.astro';
+import Header from '@components/Header.astro';
+
+interface Props {
+	title: string;
+	description: string;
+	footer?: boolean;
+}
+
+const { title, description, footer=true } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	</head>
+	<body>
+		<Header/>
+		<slot />
+		{footer && <Footer/>}
+	</body>
+</html>
+<style is:global>
+	@font-face {
+		font-family: "Main";
+		src: url('/fonts/Rajdhani-Light.ttf') format('truetype');
+		font-weight:100 ;
+	}
+	@font-face {
+		font-family: "Main";
+		src: url('/fonts/Rajdhani-Regular.ttf') format('truetype');
+		font-weight:400;
+	}
+	@font-face {
+		font-family: "Main";
+		src: url('/fonts/Rajdhani-Bold.ttf') format('truetype');
+		font-weight:900;
+	}
+
+
+	@font-face {
+		font-family: "Aux";
+		src: url('/fonts/Raleway-Bold.ttf') format('truetype');
+		font-weight:900;
+	}
+	@font-face {
+		font-family: "Aux";
+		src: url('/fonts/Raleway-Regular.ttf') format('truetype');
+		font-weight:400;
+	}
+	@font-face {
+		font-family: "Aux";
+		src: url('/fonts/Raleway-Light.ttf') format('truetype');
+		font-weight:100;
+	}
+	html {
+		font-family: Main, system-ui, sans-serif;
+		background: #ffffff;
+	}
+	code {
+		font-family:
+			Menlo,
+			Monaco,
+			Lucida Console,
+			Liberation Mono,
+			DejaVu Sans Mono,
+			Bitstream Vera Sans Mono,
+			Courier New,
+			monospace;
+	}
+	body {
+		font-size: 2rem;
+	}
+</style>

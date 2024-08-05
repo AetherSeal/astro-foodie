@@ -1,0 +1,54 @@
+---
+import Button from "@components/Button.astro";
+import Layout from "@layouts/Layout.astro";
+---
+<Layout title="Fake Web" description="Dummy data restaurant" footer={false}>
+
+    <section class="relative scroll-m-1 bg-gift bg-cover w-screen h-screen " >
+        <div class="h-full w-full overflow-y-auto">
+
+        <div class="max-w-5xl m-auto text-sm grid grid-cols-3 pt-[20vh] gap-10 ">
+            <form action="" class="flex flex-col gap-4 col-span-2 p-10 bg-white rounded font-aux">
+                <h3 class="border-b-slate-500 border-b-[1px] text-lg font-black ">Choose Ammount</h3>
+                <div class="grid grid-cols-4 gap-5 p-8">
+                    <label for="ammount" class="text-right">Ammount</label>
+                    <input type="number" name="ammount" id="ammount" class="border-slate-700 border-[1px] rounded leading-8 px-8 bg-neutral-100  col-span-2">         
+                </div>
+                <h3 class="border-b-slate-500 border-b-[1px] text-lg font-black">Personalize</h3>
+                <div class="flex flex-col gap-8 p-8">
+                    <div class="grid grid-cols-4 gap-5">
+                        <label for="subject" class="text-right">To</label>
+                        <input type="text" name="subject" id="subject" class="border-slate-700 border-[1px] rounded leading-8 px-8 bg-neutral-100 col-span-2">   
+                    </div>
+                    <div class="grid grid-cols-4 gap-5">
+                        <label for="subject" class="text-right">From</label>
+                        <input type="text" name="subject" id="subject" class="border-slate-700 border-[1px] rounded leading-8 px-8 bg-neutral-100 col-span-2">   
+                    </div>
+                    <div class="grid grid-cols-4 gap-5">
+                        <label for="subject" class="text-right">Message</label>
+                        <textarea name="subject" id="subject" class="border-slate-700 border-[1px] rounded leading-8 px-8 bg-neutral-100 col-span-2"/>         
+                    </div>
+                </div>    
+                <h3 class="border-b-slate-500 border-b-[1px] text-lg font-black">Schedule Delivery
+                </h3>
+                <div class="flex flex-col gap-8 p-8">
+                    <div class="grid grid-cols-4 gap-5">
+                        <label for="subject" class="text-right">Email</label>
+                        <input type="email" name="subject" id="subject" class="border-slate-700 border-[1px] rounded leading-8 px-8 bg-neutral-100 col-span-2">   
+                    </div>
+                    <div class="grid grid-cols-4 gap-5">
+                        <label for="subject" class="text-right">Date</label>
+                        <input type="date" name="subject" id="subject" class="border-slate-700 border-[1px] rounded leading-8 px-8 bg-neutral-100 col-span-2">   
+                    </div> 
+                </div>
+            </form>
+            <div>
+                <div class="p-10 bg-orange-600 rounded text-white">
+                    <h3 class="text-lg font-black font-aux">We’re open for online orders.</h3>
+                    <Button/>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+</Layout>

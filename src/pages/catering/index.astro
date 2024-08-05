@@ -1,0 +1,26 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Hero from "@sections/Hero.astro";
+---
+
+<Layout title="Fake Web" description="Dummy data restaurant">
+	<Hero type="image" title="Epulo Catering" source="/images/catering.jpg"/>
+    <section class="py-28">
+        <div class="max-w-5xl m-auto text-sm space-y-4  pb-20 flex flex-col   font-aux">
+            <h2 class="font-main font-black pb-10 text-center uppercase text-4xl">EPULO CATERING </h2>
+            <p class="text-justify">Let us give you the night off from cooking!  We'll provide the appetizers, dinner and dessert for your next event. </p>
+            <p class="text-justify">We offer Drop-off and Pick-Up catering at both EPULO locations, for both lunch and dinner.   We have catered corporate cocktail hours, intimate 20 person personal celebrations at home, office luncheons for up to 150 people, sports team dinners, gala and fundraiser events, and wedding receptions.   </p>
+            <p class="text-justify">Click on the location below to view that location’s menu and place your online order: </p>
+        </div>
+        <div class="grid grid-cols-2 gap-4 content-start max-w-5xl overflow-hidden m-auto">
+            <div class="relative">
+                <img src="/images/restaurant.jpg" alt="" class="object-cover h-80 w-full brightness-50">
+                <h2 class="font-main uppercase absolute text-white text-7xl font-black inset-0 w-4 h-4 flex justify-center items-center mx-auto my-auto text-center">DropOff</h2>
+            </div>  
+            <div class="relative">
+                <img src="/images/catering.jpg" alt="" class="object-cover h-80 w-full brightness-50">
+                <h2 class="font-main uppercase absolute text-white text-7xl font-black inset-0 w-4 h-4 flex justify-center items-center mx-auto my-auto text-center">PickUp</h2>
+            </div>
+        </div>
+    </section>
+</Layout>

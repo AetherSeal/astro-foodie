@@ -1,0 +1,52 @@
+---
+import Logo from "./logo.astro";
+---
+
+<header class="top-0 left-0 right-0 z-10 justify-between items-center bg-transparent fixed transition-all ease-in-out duration-1000">
+    <nav class="flex flex-row text-center text-white w-full justify-center items-center  font-aux text-sm font-bold uppercase px-10">
+        <a href="/" class="flex-1 ">Home</a>
+        <a href="/menu" class="flex-1">Menu</a>
+        <a href="/catering" class="flex-1">Catering</a>
+        <a href="/" class="transition-all ease-in-out duration-1000" data-type='logo'>
+            <Logo/>
+        </a>  
+        <a href="/events" class="flex-1">Events</a>
+        <a href="/career" class="flex-1">Work Here</a>
+        <a href="/gift" class="flex-1">Gift Card</a>
+    </nav>
+</header>
+<script>
+    const $logo = document.querySelector("a[data-type='logo']") as HTMLElement
+    const $header = document.querySelector('header') as HTMLElement
+    const $$sections = document.querySelectorAll("section[data-type='main']") as NodeListOf<HTMLElement>
+  
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    }
+    const observerCallback = (entries: IntersectionObserverEntry[], observer: IntersectionObserver) => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) {
+                $logo.classList.add('absolute','top-[-200px]')
+                $header.classList.remove('bg-transparent')
+                $header.classList.add('bg-black','p-4')
+            }else{ 
+                $logo.classList.remove('absolute','top-[-200px]')
+                $header.classList.add('bg-transparent')
+                $header.classList.remove('bg-black','p-4')
+            }
+        })
+    }
+    const observer = new IntersectionObserver( observerCallback, observerOptions)
+    $$sections.forEach(($section:HTMLElement) => {
+        observer.observe($section)
+    })   
+
+    if($$sections.length === 0){
+        $logo.classList.add('absolute','top-[-200px]')
+        $header.classList.remove('bg-transparent')
+        $header.classList.add('bg-black','p-4')
+    }
+
+</script>

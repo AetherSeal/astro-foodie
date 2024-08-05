@@ -1,0 +1,51 @@
+---
+import Button from "@components/Button.astro";
+import Layout from "@layouts/Layout.astro";
+---
+
+<Layout title="Fake Web" description="Dummy data restaurant">
+    <section class="py-28">
+        <div class="max-w-5xl m-auto text-sm space-y-4  pb-20 flex flex-col   font-aux">
+            <div class="flex flex-wrap items-center">
+                <h2 class="text-3xl uppercase font-black pr-60">WE LOVE A CELEBRATION!</h2>  
+                <Button type="normal" value="Event Inquiry"/>
+            </div>
+            <p>We are delighted to host your special occasion at our East Boston waterfront location! Our restaurant features stunning views of the Boston skyline and offers a total of 125 seats, with 65 seats inside and 60 on the patio. While we do not have a private dining room, our unique setting provides an intimate and picturesque atmosphere for your event.</p>
+            <div class="grid grid-cols-2 pb-10 gap-5">
+                <img src="/images/place1.jpg" alt="" class="object-cover h-80 w-full">
+                <div class="p-12">
+                    <h3 class="text-3xl uppercase font-black">SKYLINE VIEW SECTION  - SEATS UP TO 28</h3>
+                    <p>A favorite among both corporate clients and families celebrating milestone events, the Skyline View Section offers an unparalleled dining experience. Located next to our large windows, this space provides stunning views of the Boston skyline, creating a memorable backdrop for any occasion. Enjoy the beauty of the waterfront while savoring our delicious cuisine in this unique and picturesque area.</p>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 pb-10 gap-5">
+                <div class="p-12">
+                    <h3 class="text-3xl uppercase font-black">COCKTAIL RECEPTION AREA - HOSTS - up to 25</h3>
+                    <p>Looking for a more casual vibe? Our Cocktail Reception Area offers a relaxed setting with views of the Boston skyline and harbor. Enjoy stationary appetizers, pizzas, and craft cocktails. Perfect for intimate gatherings or medium-sized, reception-style events.</p>
+                </div>
+                <img src="/images/place2.jpg" alt="" class="object-cover h-80 w-full">
+            </div>
+            <div class="flex">
+                <div class="w-8/12">
+                    <img src="/images/place3.jpg" alt="" class="object-cover">
+                </div>
+                <div class="w-4/12 -translate-x-28 -translate-y-20">
+                    <div class="p-12 bg-black text-white ">
+                        <h3 class="text-3xl uppercase font-black pb-10">FULL BUY OUT - OVER 30 SEATS UP TO 65 or STANDING FOR 100</h3>
+                        <p>We offer a complete buyout of our East Boston waterfront venue, making it a fully private event for your group for the entire evening. Enjoy exclusive access to our stunning Boston skyline and harbor views, along with exceptional cuisine and craft cocktails. Perfect for corporate events, milestone celebrations, or any special occasion. For more information about a patio buyout, please reach out, as these are more dependent on specific circumstances.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col justify-center pt-10 border-b-2 border-black">
+                <h2 class="uppercase font-main font-black text-3xl">FULL VENUE BUYOUT- SEATS 30-65, STANDING RECEPTION FOR UP TO 100</h2>
+                <p class="font-black pb-20"> For more information about a patio buyout, please reach out, as these are more dependent on specific circumstances.</p>
+            </div>
+            <div class="flex flex-col justify-center items-center pt-10 font-black gap-8">
+                <p>Please click below to inquire about availability and pricing for your special event here at EPULO!</p>
+                <Button type="normal" value="Event Inquiry"/>
+                <p>For specific questions, email hello@epulo.com.</p>
+                <p>88 Lewis Street East Bananas, MA 77177 MA 99119. (654)-123-9999</p>
+            </div>
+        </div>
+    </section>
+</Layout>

@@ -1,0 +1,56 @@
+---
+import Button from "@components/Button.astro";
+import Layout from "@layouts/Layout.astro";
+---
+
+<Layout title="Fake Web" description="Dummy data restaurant">
+    <section class="py-28">
+        <div class="max-w-5xl m-auto text-sm space-y-4 pb-20 flex flex-col font-aux">
+            <h1 class="uppercase text-4xl font-main font-black text-center mb-14">Work at EPULO</h1>
+            <p>We are looking for passionate individuals to join our team.</p>
+            <h2 class="text-4xl font-main font-black">Please complete the form below</h2>
+            <form action="" class="flex flex-col gap-4">
+                <div class="grid grid-cols-2 gap-4">   
+                    <div class="flex flex-col">
+                        <label for="fname">First Name:</label>
+                        <input type="text" id="fname" name="fname" required class="border-slate-700 border-[1px] rounded leading-8 px-8 bg-neutral-100"/>    
+                    </div>
+                    <div class="flex flex-col">              
+                        <label for="lname">Last Name:</label>
+                        <input type="text" id="lname" name="lname" required class="border-slate-700 border-[1px] rounded leading-8 px-8 bg-neutral-100"/>
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <label for="email">Email Address</label>
+                    <input type="email" name="email" id="email" class="border-slate-700 border-[1px] rounded leading-8 px-8 bg-neutral-100">         
+                </div>
+                <div class="flex flex-col">
+                    <label for="subject">Subject</label>
+                    <input type="text" name="subject" id="subject" class="border-slate-700 border-[1px] rounded leading-8 px-8 bg-neutral-100">         
+                </div>
+                <div class="flex flex-col">
+                    <label for="Area">Area of employment</label>
+                    <select name="Area" id="Area" class="border-slate-700 border-[1px] rounded h-9 px-8 bg-neutral-100">
+                        <option value="">Front</option>    
+                        <option value="">Back</option>    
+                    </select>       
+                </div>
+                <div class="flex flex-col">
+                    <label for="role">Specific role</label>
+                    <input type="text" name="role" id="role" class="border-slate-700 border-[1px] rounded leading-8 px-8 bg-neutral-100">         
+                </div>
+                <div class="flex flex-col">
+                    <label for="resume">Paste your resume here</label>
+                    <textarea name="resume" id="resume" class="border-slate-700 border-[1px] rounded leading-8 px-8 bg-neutral-100"/>
+                </div>
+                <div class="flex flex-col">
+                    <label for="words">What are the 5 words that come to mind when you think about hospitality?</label>
+                    <input type="text" name="words" id="words" class="border-slate-700 border-[1px] rounded leading-8 px-8 bg-neutral-100">         
+                </div>
+                <div class="flex justify-center pt-10">
+                    <Button type="normal" value="Submit"/>
+                </div>
+            </form>
+        </div>
+    </section>
+</Layout>

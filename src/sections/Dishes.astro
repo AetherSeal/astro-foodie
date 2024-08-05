@@ -1,0 +1,69 @@
+<section class="dishes-gallery">
+    <ul class="columns-3 gap-x-1 space-y-1 bg-black ">
+        <li>
+            <img style="--index:1" src="https://www.themealdb.com/images/media/meals/usywpp1511189717.jpg" alt="">
+        </li>
+        <li>
+            <img style="--index:6" src="https://www.themealdb.com/images/media/meals/llcbn01574260722.jpg" alt="">
+        </li>
+        <li>
+            <img style="--index:3" src="https://www.themealdb.com/images/media/meals/wtsvxx1511296896.jpg" alt="">
+        </li>
+        <li>
+            <img style="--index:4" src="https://www.themealdb.com/images/media/meals/0jv5gx1661040802.jpg" alt="">
+        </li>
+        <li>
+            <img style="--index:2" src="https://www.themealdb.com/images/media/meals/qvrwpt1511181864.jpg" alt="">
+        </li>
+        <li>
+            <img style="--index:5" src="https://www.themealdb.com/images/media/meals/yuwtuu1511295751.jpg" alt="">
+        </li>
+
+    </ul>
+</section>
+<style>
+    .dishes-gallery img{
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(100px);
+        transition: transform 1s, opacity 1s, visibility 1s;
+        transition-delay:calc(var(--index)*300ms) ;
+        
+    }
+    .dishes-gallery.animate img{
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0px);
+
+    }
+</style>
+<script>
+    // callback for the observer
+    const callback = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // entry.target is the element that is being observed
+                entry.target.classList.add('animate')
+                // observer.unobserve(entry.target) 
+            }
+            if (!entry.isIntersecting) entry.target.classList.remove('animate')
+        })
+    }
+    // options for the observer
+    const options = {
+        root: null,
+        rootMargin: '-200px',
+        threshold: 0.1
+    }
+    // creation of the observer
+    const observer = new IntersectionObserver(callback, options)
+    
+    // selecting elements to be observed
+    const $dishes = document.querySelectorAll('.dishes-gallery')
+    $dishes.forEach($dish => {
+        observer.observe($dish)
+    })
+    // declaring elements to be observed
+
+    
+</script>

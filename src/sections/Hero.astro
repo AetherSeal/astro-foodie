@@ -1,0 +1,8 @@
+---
+    const {type, title, source} = Astro.props
+---
+<section class="font-thin relative" data-type="main" >
+    {type === 'video' && <video class="w-full aspect-[20/9] object-cover" src="/videos/main.mp4" autoplay loop muted playsinline/>}
+    {type === 'image' && <img class="w-full aspect-[20/9] object-cover grayscale brightness-50" src={source} alt="main"/>}
+    {title && <h2 class="font-main uppercase absolute text-white text-7xl font-black inset-0 w-4 h-4 flex justify-center items-center mx-auto my-auto text-center">{title}</h2>}
+</section> 

@@ -1,0 +1,35 @@
+---
+import Button from "@components/Button.astro";
+---
+
+<footer class="bg-neutral-900 flex flex-col justify-center items-center text-white pt-5 pb-16">
+    <ul class="flex flex-row gap-3 mb-5">
+        <li>
+            <a href="https://www.facebook.com">
+                <img class="w-9" src="/images/svg/facebook.svg" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="https://www.instagram.com">
+                <img class="w-9" src="/images/svg/instagram.svg" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="https://www.x.com">
+                <img class="w-9" src="/images/svg/x.svg" alt="">
+            </a>
+        </li>
+    </ul>
+    <h2 class="text-3xl font-black pb-3">Reserve Your Place On Our Email List</h2>
+    <p class="pb-10 text-base font-aux font-black">
+        Sign up with your email address to receive news and updates from Mida.
+    </p>
+    <div>
+        <input class="text-black  text-base  h-12 placeholder:text-gray-300 pl-3 font-aux w-60" type="text" placeholder="Email Address"/>
+        <Button value="Sign up" type="submit"/>
+    </div>
+    <p class="font-aux text-xs mt-8 text-stone-400 font-black">We respect your privacy.</p>
+    <p class="mt-32 text-sm font-aux  ">
+        Build by Alejandro Castro👷‍♂️ using Astro🚀
+    </p>
+</footer>

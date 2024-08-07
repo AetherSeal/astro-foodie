@@ -8,7 +8,7 @@ const {dishes, title} = Astro.props
         {
             dishes.map((dish:menuDish)=>{
                 return (
-                    <div class="max-h-13 min-h-13 grid-cols-2 gap-4 content-start">
+                    <div class="max-h-13 min-h-13 grid grid-cols-3 gap-4 content-start">
                         <div class="col-span-2 flex align-top flex-col">
                             <h2 class="text-base font-aux font-black">{dish.title}</h2>
                             <p class=" line-clamp-2 text-xs">
